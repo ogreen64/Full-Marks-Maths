@@ -9,118 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#14123a; --muted:#5b5a7a; --bg:#fbfaff; --card:#ffffff;
-  --brand:#4f46e5; --brand-dark:#3730a3; --accent:#f59e0b; --mint:#10b981;
-  --line:#e6e4f5; --soft:#f0eeff;
-  --radius:18px; --shadow:0 10px 30px -12px rgba(79,70,229,.25);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;letter-spacing:-.01em}
-a{color:inherit}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-section{padding:80px 0}
-.eyebrow{display:inline-block;font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:12px}
-h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px}
-.lead{color:var(--muted);font-size:1.1rem;max-width:620px}
-.center{text-align:center}.center .lead{margin:0 auto}
-
-/* nav */
-header{position:sticky;top:0;z-index:10;background:rgba(251,250,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;justify-content:space-between;height:66px}
-.logo{display:flex;align-items:center;gap:10px;font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;text-decoration:none}
-.logo .lm{color:var(--brand);font-style:italic}
-nav ul{display:flex;gap:26px;list-style:none;align-items:center}
-nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
-nav ul a:hover{color:var(--brand)}
-.btn{display:inline-block;padding:13px 26px;border-radius:999px;background:var(--brand);color:#fff!important;font-weight:600;text-decoration:none;box-shadow:var(--shadow);transition:transform .15s,background .15s}
-.btn:hover{background:var(--brand-dark);transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:var(--brand)!important;border:2px solid var(--brand);box-shadow:none}
-.btn.ghost:hover{background:var(--soft)}
-.btn.sm{padding:9px 20px;font-size:.9rem}
-
-/* hero */
-.hero{position:relative;overflow:hidden;padding:80px 0 90px;background:
-  radial-gradient(900px 400px at 85% -10%,#e0dcff 0,transparent 60%),
-  radial-gradient(600px 300px at 0% 100%,#fff1d6 0,transparent 60%)}
-.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
-.hero h1{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:20px}
-.hero h1 em{color:var(--brand);font-style:italic}
-.hero p{font-size:1.15rem;color:var(--muted);max-width:520px;margin-bottom:30px}
-.cta{display:flex;gap:14px;flex-wrap:wrap}
-.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;font-size:.92rem;color:var(--muted)}
-.trust span::before{content:"✓ ";color:var(--mint);font-weight:700}
-
-/* hero card */
-.board{background:#1b1850;color:#e9e7ff;border-radius:24px;padding:28px;box-shadow:0 30px 60px -20px rgba(27,24,80,.5);transform:rotate(1.5deg);position:relative}
-.board .dots{display:flex;gap:6px;margin-bottom:18px}
-.board .dots i{width:10px;height:10px;border-radius:50%;background:#ff6b6b}
-.board .dots i:nth-child(2){background:#fbbf24}.board .dots i:nth-child(3){background:#34d399}
-.board .eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:1.35rem;margin:10px 0;opacity:.95}
-.board .eq.big{font-size:1.8rem;color:#fcd34d}
-.board .mark{position:absolute;right:-14px;bottom:-18px;background:var(--accent);color:#3b2600;font-weight:700;border-radius:14px;padding:10px 18px;transform:rotate(-6deg);box-shadow:0 10px 20px -8px rgba(0,0,0,.4);font-family:Fraunces,serif;font-size:1.3rem}
-
-/* cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:44px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-.card .ic{width:46px;height:46px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:1.4rem;margin-bottom:16px}
-.card h3{font-size:1.2rem;margin-bottom:8px}
-.card p{color:var(--muted);font-size:.97rem}
-
-/* pricing */
-.alt{background:var(--soft)}
-.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;max-width:800px;margin:44px auto 0}
-.price{background:#fff;border:2px solid var(--line);border-radius:24px;padding:36px 30px;text-align:left;position:relative}
-.price.pop{border-color:var(--brand);box-shadow:var(--shadow)}
-.price .tag{position:absolute;top:-13px;right:24px;background:var(--accent);color:#3b2600;font-weight:700;font-size:.75rem;padding:5px 12px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase}
-.price h3{font-size:1.4rem}
-.amt{font-family:Fraunces,serif;font-size:3.4rem;font-weight:700;color:var(--brand);margin:12px 0 2px}
-.amt small{font-size:1rem;color:var(--muted);font-family:Inter,sans-serif;font-weight:500}
-.price ul{list-style:none;margin:20px 0 28px}
-.price li{padding:6px 0 6px 28px;position:relative;color:var(--muted);font-size:.97rem}
-.price li::before{content:"✓";position:absolute;left:0;color:var(--mint);font-weight:700}
-.price .btn{width:100%;text-align:center}
-.note{margin-top:22px;color:var(--muted);font-size:.9rem}
-
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:44px;counter-reset:s}
-.step{counter-increment:s;padding-top:8px}
-.step::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;font-family:Fraunces,serif;font-weight:700;margin-bottom:14px}
-.step h3{font-size:1.15rem;margin-bottom:6px}
-.step p{color:var(--muted);font-size:.96rem}
-
-/* parents/quote */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:44px}
-.panel{border-radius:var(--radius);padding:34px}
-.panel.a{background:#fff;border:1px solid var(--line)}
-.panel.b{background:var(--brand);color:#fff}
-.panel h3{margin-bottom:14px;font-size:1.4rem}
-.panel ul{list-style:none}
-.panel li{padding:7px 0 7px 28px;position:relative}
-.panel li::before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:700}
-.panel.a li{color:var(--muted)}
-
-/* cta band */
-.band{background:linear-gradient(135deg,#3730a3,#4f46e5 60%,#7c3aed);color:#fff;border-radius:28px;padding:60px 30px;text-align:center}
-.band h2{color:#fff}
-.band p{color:#e0deff;max-width:520px;margin:0 auto 26px}
-.band .btn{background:var(--accent);color:#3b2600!important}
-.band .btn:hover{background:#fbbf24}
-
-footer{padding:36px 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-
-@media(max-width:820px){
-  .hero .grid,.two{grid-template-columns:1fr}
-  .board{transform:none;margin-top:10px}
-  nav ul li:not(:last-child){display:none}
-  section{padding:60px 0}
-}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -131,13 +20,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#4f46e5"/><path d="M8 22l8 8L32 10" fill="none" stroke="#fbbf24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span>Full Marks <span class="lm">Maths</span></span>
       </a>
-      <ul>
-        <li><a href="#why">Why us</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#parents">Parents</a></li>
-        <li><a class="btn sm" href="#contact">Book a session</a></li>
-      </ul>
+      <ul><li><a href="about.html">About</a></li><li><a href="subjects.html">Subjects</a></li><li><a href="pricing.html">Pricing</a></li><li><a class="btn sm" href="contact.html">Book a session</a></li></ul>
     </nav>
   </div>
 </header>
@@ -150,8 +33,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <h1>Stop guessing. Start scoring <em>full marks.</em></h1>
       <p>Friendly, expert one-to-one tutoring that turns confusing topics into clear steps, so students understand the maths, ace the exam technique and walk in confident.</p>
       <div class="cta">
-        <a class="btn" href="#contact">Book a session</a>
-        <a class="btn ghost" href="#pricing">See pricing</a>
+        <a class="btn" href="contact.html">Book a session</a>
+        <a class="btn ghost" href="pricing.html">See pricing</a>
       </div>
       <div class="trust">
         <span>One-to-one lessons</span>
@@ -199,7 +82,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           <li>Past-paper practice &amp; feedback</li>
           <li>Revision and exam technique</li>
         </ul>
-        <a class="btn ghost" href="#contact">Book Maths</a>
+        <a class="btn ghost" href="contact.html">Book Maths</a>
       </div>
       <div class="price pop">
         <span class="tag">For high-flyers</span>
@@ -211,7 +94,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           <li>Challenging problem-solving</li>
           <li>Past-paper practice &amp; feedback</li>
         </ul>
-        <a class="btn" href="#contact">Book Further Maths</a>
+        <a class="btn" href="contact.html">Book Further Maths</a>
       </div>
     </div>
     <p class="note">Studying both? Get in touch to plan a schedule that works.</p>
@@ -265,7 +148,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <div class="band">
       <h2>Ready to aim for full marks?</h2>
       <p>Get in touch to arrange your first session and take the stress out of A Level maths.</p>
-      <a class="btn" href="mailto:hello@fullmarksmaths.co.uk">hello@fullmarksmaths.co.uk</a>
+      <a class="btn" href="contact.html">Book a session</a>
     </div>
   </div>
 </section>

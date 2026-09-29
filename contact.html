@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Full Marks Maths</title>
+<meta name="description" content="Book an A Level Maths or Further Maths tutoring session with Full Marks Maths.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="index.html" aria-label="Full Marks Maths home">
+        <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#4f46e5"/><path d="M8 22l8 8L32 10" fill="none" stroke="#fbbf24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Full Marks <span class="lm">Maths</span></span>
+      </a>
+      <ul><li><a href="about.html">About</a></li><li><a href="subjects.html">Subjects</a></li><li><a href="pricing.html">Pricing</a></li><li><a class="btn sm" href="contact.html">Book a session</a></li></ul>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Contact</span><h1>Book a session</h1><p>Tell us a little about what you need and we'll get back to you to arrange your first lesson.</p></div></section>
+<section><div class="wrap split">
+<form action="mailto:hello@fullmarksmaths.co.uk" method="post" enctype="text/plain">
+<label for="n">Your name</label><input id="n" name="name" required>
+<label for="e">Email</label><input id="e" name="email" type="email" required>
+<label for="s">Subject</label><select id="s" name="subject"><option>A Level Maths (£40/hr)</option><option>A Level Further Maths (£50/hr)</option><option>Both</option></select>
+<label for="b">Exam board (if known)</label><input id="b" name="board" placeholder="AQA, Edexcel, OCR, MEI…">
+<label for="m">What would you like help with?</label><textarea id="m" name="message"></textarea>
+<button class="btn" type="submit">Send enquiry</button>
+</form>
+<div class="info"><h2>Get in touch</h2><p style="margin-top:14px">Whether you're a student or a parent, we're happy to answer any questions before you book.</p>
+<p><b>Email</b><a href="mailto:hello@fullmarksmaths.co.uk">hello@fullmarksmaths.co.uk</a></p>
+<p><b>Rates</b>A Level Maths £40/hr<br>A Level Further Maths £50/hr</p></div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Full Marks Maths. All rights reserved.</span>
+    <span><a href="about.html">About</a> · <a href="subjects.html">Subjects</a> · <a href="pricing.html">Pricing</a> · <a href="contact.html">Contact</a></span>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html>
